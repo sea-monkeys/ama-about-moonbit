@@ -1,0 +1,8 @@
+FROM ollama/ollama:0.5.7
+
+RUN /bin/sh -c "/bin/ollama serve & sleep 60 && ollama pull qwen2.5:0.5b"
+RUN /bin/sh -c "/bin/ollama serve & sleep 60 && ollama pull qwen2.5:1.5b"
+# IF the LLM is bigger than 1GB, you may need to increase the sleep time
+ENTRYPOINT ["/bin/ollama"]
+EXPOSE 11434
+CMD ["serve"]

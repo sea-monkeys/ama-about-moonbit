@@ -1,0 +1,760 @@
+Directory structure:
+└── input/
+    ├── moonbit-docs/
+    │   ├── CONTRIBUTING-zh.md
+    │   ├── CONTRIBUTING.md
+    │   ├── LICENSE.md
+    │   ├── README-zh.md
+    │   ├── README.md
+    │   ├── legacy/
+    │   │   ├── benchmark/
+    │   │   │   ├── fibonacci/
+    │   │   │   │   ├── README.md
+    │   │   ├── examples/
+    │   │   │   ├── assert/
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── assert.mbt
+    │   │   │   │   ├── main/
+    │   │   │   │   │   ├── main.mbt
+    │   │   │   ├── avl_tree/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── avl.mbt
+    │   │   │   │   ├── main/
+    │   │   │   │   │   ├── main.mbt
+    │   │   │   ├── buffer/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── buffer.mbt
+    │   │   │   │   ├── main/
+    │   │   │   │   │   ├── main.mbt
+    │   │   │   ├── bytes-buffer/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── buffer.mbt
+    │   │   │   │   │   ├── buffer_test.mbt
+    │   │   │   ├── cf_worker/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── top.mbt
+    │   │   │   ├── char/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── char.mbt
+    │   │   │   │   │   ├── char_test.mbt
+    │   │   │   ├── docstring-demo/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── hello.mbt
+    │   │   │   │   ├── main/
+    │   │   │   │   │   ├── main.mbt
+    │   │   │   ├── game_of_life/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── draw.mbt
+    │   │   │   │   │   ├── game_of_life.mbt
+    │   │   │   ├── koch_snowflake/
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── koch.mbt
+    │   │   │   ├── mandelbrot/
+    │   │   │   │   ├── REAME.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── mandelbrot.mbt
+    │   │   │   ├── multidimensional_arrays/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── arrays.mbt
+    │   │   │   │   │   ├── arrays_test.mbt
+    │   │   │   ├── number/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── number.mbt
+    │   │   │   │   │   ├── number_test.mbt
+    │   │   │   ├── palindrome_string/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── str_iter.mbt
+    │   │   │   │   │   ├── str_iter_test.mbt
+    │   │   │   ├── path/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── path.mbt
+    │   │   │   │   │   ├── path_test.mbt
+    │   │   │   │   │   ├── string.mbt
+    │   │   │   ├── snake/
+    │   │   │   │   ├── extern/
+    │   │   │   │   │   ├── string.js.mbt
+    │   │   │   │   │   ├── string.wasm-gc.mbt
+    │   │   │   │   │   ├── string.wasm.mbt
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── draw.js.mbt
+    │   │   │   │   │   ├── draw.mbt
+    │   │   │   │   │   ├── draw.wasm-gc.mbt
+    │   │   │   │   │   ├── draw.wasm.mbt
+    │   │   │   │   │   ├── snake.mbt
+    │   │   │   │   ├── main/
+    │   │   │   │   │   ├── main.js.mbt
+    │   │   │   │   │   ├── main.mbt
+    │   │   │   │   │   ├── main.wasm-gc.mbt
+    │   │   │   │   │   ├── main.wasm.mbt
+    │   │   │   ├── string/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── string.mbt
+    │   │   │   │   │   ├── string_test.mbt
+    │   │   │   ├── tetris/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── lib/
+    │   │   │   │   │   ├── config.mbt
+    │   │   │   │   │   ├── draw.mbt
+    │   │   │   │   │   ├── tetris.mbt
+    │   │   │   │   │   ├── utils.mbt
+    │   │   │   ├── unicode_demo/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── main/
+    │   │   │   │   │   ├── main.mbt
+    │   │   │   ├── wasi-http/
+    │   │   │   │   ├── ffi/
+    │   │   │   │   │   ├── top.mbt
+    │   │   │   │   ├── gen/
+    │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   ├── gen_interface_wasi_http_incoming_handler_export.mbt
+    │   │   │   │   │   ├── interface/
+    │   │   │   │   │   │   ├── wasi/
+    │   │   │   │   │   │   │   ├── http/
+    │   │   │   │   │   │   │   │   ├── incomingHandler/
+    │   │   │   │   │   │   │   │   │   ├── README.md
+    │   │   │   │   │   │   │   │   │   ├── stub.mbt
+    │   │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── world/
+    │   │   │   │   │   │   ├── server/
+    │   │   │   │   │   │   │   ├── stub.mbt
+    │   │   │   │   │   ├── world_server_export.mbt
+    │   │   │   │   ├── interface/
+    │   │   │   │   │   ├── wasi/
+    │   │   │   │   │   │   ├── cli/
+    │   │   │   │   │   │   │   ├── stderr/
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   │   ├── stdin/
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   │   ├── stdout/
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── clocks/
+    │   │   │   │   │   │   │   ├── monotonicClock/
+    │   │   │   │   │   │   │   │   ├── README.md
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   │   ├── wallClock/
+    │   │   │   │   │   │   │   │   ├── README.md
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── http/
+    │   │   │   │   │   │   │   ├── outgoingHandler/
+    │   │   │   │   │   │   │   │   ├── README.md
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   │   ├── types/
+    │   │   │   │   │   │   │   │   ├── README.md
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── io/
+    │   │   │   │   │   │   │   ├── error/
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   │   ├── poll/
+    │   │   │   │   │   │   │   │   ├── README.md
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   │   ├── streams/
+    │   │   │   │   │   │   │   │   ├── README.md
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── random/
+    │   │   │   │   │   │   │   ├── random/
+    │   │   │   │   │   │   │   │   ├── README.md
+    │   │   │   │   │   │   │   │   ├── ffi.mbt
+    │   │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   ├── world/
+    │   │   │   │   │   ├── server/
+    │   │   │   │   │   │   ├── ffi_import.mbt
+    │   │   │   │   │   │   ├── import.mbt
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   ├── wasm-gc/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── main/
+    │   │   │   │   │   ├── main.mbt
+    │   ├── moonbit-tour/
+    │   │   ├── README-zh.md
+    │   │   ├── README.md
+    │   │   ├── tour/
+    │   │   │   ├── chapter1_basics/
+    │   │   │   │   ├── lesson10_loop/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson11_for_in_loop/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson12_range/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson13_exception/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson14_test/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson1_variable/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson2_numbers/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson3_function/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson4_block/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson5_array/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson6_string/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson7_tuple/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson8_map/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson9_if_else/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   ├── chapter2_data_types/
+    │   │   │   │   ├── lesson1_struct/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson2_mutable_field/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson3_enum/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson4_newtype/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson5_option/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson6_result/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   ├── chapter3_pattern_matching/
+    │   │   │   │   ├── lesson1_introduction/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson2_let_and_match/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson3_constant_pattern/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson4_tuple_pattern/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson5_alias_pattern/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson6_array_pattern/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson7_or_pattern/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson8_range_pattern/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   ├── chapter4_more_data_types/
+    │   │   │   │   ├── lesson1_immutable_list/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson2_immutable_set/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── lesson3_immutable_map/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   ├── chapter5_methods_and_traits/
+    │   │   │   │   ├── lesson1_methods/
+    │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   ├── index.md
+    │   │   │   ├── index.mbt
+    │   │   │   ├── index.md
+    │   │   │   ├── zh/
+    │   │   │   │   ├── chapter1_basics/
+    │   │   │   │   │   ├── lesson10_loop/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson11_for_in_loop/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson12_range/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson13_exception/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson14_test/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson1_variable/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson2_numbers/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson3_function/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson4_block/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson5_array/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson6_string/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson7_tuple/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson8_map/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson9_if_else/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── chapter2_data_types/
+    │   │   │   │   │   ├── lesson1_struct/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson2_mutable_field/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson3_enum/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson4_newtype/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson5_option/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson6_result/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── chapter3_pattern_matching/
+    │   │   │   │   │   ├── lesson1_introduction/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson2_let_and_match/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson3_constant_pattern/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson4_tuple_pattern/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson5_alias_pattern/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson6_array_pattern/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson7_or_pattern/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson8_range_pattern/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── chapter4_more_data_types/
+    │   │   │   │   │   ├── lesson1_immutable_list/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson2_immutable_set/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   │   ├── lesson3_immutable_map/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── chapter5_methods_and_traits/
+    │   │   │   │   │   ├── lesson1_methods/
+    │   │   │   │   │   │   ├── index.mbt
+    │   │   │   │   │   │   ├── index.md
+    │   │   │   │   ├── index.mbt
+    │   │   │   │   ├── index.md
+    │   ├── next/
+    │   │   ├── README-zh.md
+    │   │   ├── README.md
+    │   │   ├── example/
+    │   │   │   ├── gmachine/
+    │   │   │   │   ├── gmachine-1.md
+    │   │   │   │   ├── gmachine-2.md
+    │   │   │   │   ├── gmachine-3.md
+    │   │   │   │   ├── index.md
+    │   │   │   ├── index.md
+    │   │   │   ├── lambda/
+    │   │   │   │   ├── index.md
+    │   │   │   ├── myers-diff/
+    │   │   │   │   ├── index.md
+    │   │   │   │   ├── myers-diff.md
+    │   │   │   │   ├── myers-diff2.md
+    │   │   │   │   ├── myers-diff3.md
+    │   │   │   ├── segment-tree/
+    │   │   │   │   ├── index.md
+    │   │   │   │   ├── segment-tree.md
+    │   │   │   │   ├── segment-tree2.md
+    │   │   │   ├── sudoku/
+    │   │   │   │   ├── index.md
+    │   │   ├── index.md
+    │   │   ├── language/
+    │   │   │   ├── async-experimental.md
+    │   │   │   ├── derive.md
+    │   │   │   ├── docs.md
+    │   │   │   ├── error-handling.md
+    │   │   │   ├── error_codes/
+    │   │   │   │   ├── E0001.md
+    │   │   │   │   ├── E1001.md
+    │   │   │   │   ├── E1002.md
+    │   │   │   │   ├── E1003.md
+    │   │   │   │   ├── E1004.md
+    │   │   │   │   ├── E1005.md
+    │   │   │   │   ├── E1006.md
+    │   │   │   │   ├── E1007.md
+    │   │   │   │   ├── E1008.md
+    │   │   │   │   ├── E1009.md
+    │   │   │   │   ├── E1010.md
+    │   │   │   │   ├── E1011.md
+    │   │   │   │   ├── E1012.md
+    │   │   │   │   ├── E1013.md
+    │   │   │   │   ├── E1014.md
+    │   │   │   │   ├── E1015.md
+    │   │   │   │   ├── E1016.md
+    │   │   │   │   ├── E1018.md
+    │   │   │   │   ├── E1019.md
+    │   │   │   │   ├── E1020.md
+    │   │   │   │   ├── E1021.md
+    │   │   │   │   ├── E1022.md
+    │   │   │   │   ├── E1023.md
+    │   │   │   │   ├── E1024.md
+    │   │   │   │   ├── E1026.md
+    │   │   │   │   ├── E1027.md
+    │   │   │   │   ├── E1028.md
+    │   │   │   │   ├── E1029.md
+    │   │   │   │   ├── E1030.md
+    │   │   │   │   ├── E1031.md
+    │   │   │   │   ├── E1032.md
+    │   │   │   │   ├── E1033.md
+    │   │   │   │   ├── E1034.md
+    │   │   │   │   ├── E1035.md
+    │   │   │   │   ├── E1036.md
+    │   │   │   │   ├── E1037.md
+    │   │   │   │   ├── E1038.md
+    │   │   │   │   ├── E1039.md
+    │   │   │   │   ├── E1040.md
+    │   │   │   │   ├── E2000.md
+    │   │   │   │   ├── E3001.md
+    │   │   │   │   ├── E3002.md
+    │   │   │   │   ├── E3003.md
+    │   │   │   │   ├── E3004.md
+    │   │   │   │   ├── E3005.md
+    │   │   │   │   ├── E3006.md
+    │   │   │   │   ├── E3007.md
+    │   │   │   │   ├── E3008.md
+    │   │   │   │   ├── E3009.md
+    │   │   │   │   ├── E3010.md
+    │   │   │   │   ├── E3011.md
+    │   │   │   │   ├── E3012.md
+    │   │   │   │   ├── E3014.md
+    │   │   │   │   ├── E3015.md
+    │   │   │   │   ├── E3016.md
+    │   │   │   │   ├── E3017.md
+    │   │   │   │   ├── E3018.md
+    │   │   │   │   ├── E3019.md
+    │   │   │   │   ├── E3020.md
+    │   │   │   │   ├── E3800.md
+    │   │   │   │   ├── E4000.md
+    │   │   │   │   ├── E4001.md
+    │   │   │   │   ├── E4002.md
+    │   │   │   │   ├── E4003.md
+    │   │   │   │   ├── E4004.md
+    │   │   │   │   ├── E4005.md
+    │   │   │   │   ├── E4006.md
+    │   │   │   │   ├── E4007.md
+    │   │   │   │   ├── E4008.md
+    │   │   │   │   ├── E4009.md
+    │   │   │   │   ├── E4010.md
+    │   │   │   │   ├── E4011.md
+    │   │   │   │   ├── E4012.md
+    │   │   │   │   ├── E4013.md
+    │   │   │   │   ├── E4014.md
+    │   │   │   │   ├── E4015.md
+    │   │   │   │   ├── E4016.md
+    │   │   │   │   ├── E4017.md
+    │   │   │   │   ├── E4018.md
+    │   │   │   │   ├── E4019.md
+    │   │   │   │   ├── E4020.md
+    │   │   │   │   ├── E4021.md
+    │   │   │   │   ├── E4023.md
+    │   │   │   │   ├── E4024.md
+    │   │   │   │   ├── E4025.md
+    │   │   │   │   ├── E4026.md
+    │   │   │   │   ├── E4027.md
+    │   │   │   │   ├── E4028.md
+    │   │   │   │   ├── E4029.md
+    │   │   │   │   ├── E4030.md
+    │   │   │   │   ├── E4031.md
+    │   │   │   │   ├── E4032.md
+    │   │   │   │   ├── E4033.md
+    │   │   │   │   ├── E4034.md
+    │   │   │   │   ├── E4036.md
+    │   │   │   │   ├── E4037.md
+    │   │   │   │   ├── E4038.md
+    │   │   │   │   ├── E4039.md
+    │   │   │   │   ├── E4040.md
+    │   │   │   │   ├── E4041.md
+    │   │   │   │   ├── E4042.md
+    │   │   │   │   ├── E4043.md
+    │   │   │   │   ├── E4044.md
+    │   │   │   │   ├── E4045.md
+    │   │   │   │   ├── E4046.md
+    │   │   │   │   ├── E4047.md
+    │   │   │   │   ├── E4048.md
+    │   │   │   │   ├── E4049.md
+    │   │   │   │   ├── E4050.md
+    │   │   │   │   ├── E4051.md
+    │   │   │   │   ├── E4052.md
+    │   │   │   │   ├── E4053.md
+    │   │   │   │   ├── E4054.md
+    │   │   │   │   ├── E4055.md
+    │   │   │   │   ├── E4056.md
+    │   │   │   │   ├── E4057.md
+    │   │   │   │   ├── E4059.md
+    │   │   │   │   ├── E4060.md
+    │   │   │   │   ├── E4061.md
+    │   │   │   │   ├── E4062.md
+    │   │   │   │   ├── E4063.md
+    │   │   │   │   ├── E4065.md
+    │   │   │   │   ├── E4066.md
+    │   │   │   │   ├── E4067.md
+    │   │   │   │   ├── E4068.md
+    │   │   │   │   ├── E4069.md
+    │   │   │   │   ├── E4070.md
+    │   │   │   │   ├── E4071.md
+    │   │   │   │   ├── E4072.md
+    │   │   │   │   ├── E4073.md
+    │   │   │   │   ├── E4074.md
+    │   │   │   │   ├── E4075.md
+    │   │   │   │   ├── E4076.md
+    │   │   │   │   ├── E4077.md
+    │   │   │   │   ├── E4078.md
+    │   │   │   │   ├── E4079.md
+    │   │   │   │   ├── E4080.md
+    │   │   │   │   ├── E4081.md
+    │   │   │   │   ├── E4082.md
+    │   │   │   │   ├── E4083.md
+    │   │   │   │   ├── E4084.md
+    │   │   │   │   ├── E4085.md
+    │   │   │   │   ├── E4086.md
+    │   │   │   │   ├── E4087.md
+    │   │   │   │   ├── E4088.md
+    │   │   │   │   ├── E4089.md
+    │   │   │   │   ├── E4090.md
+    │   │   │   │   ├── E4091.md
+    │   │   │   │   ├── E4092.md
+    │   │   │   │   ├── E4093.md
+    │   │   │   │   ├── E4094.md
+    │   │   │   │   ├── E4095.md
+    │   │   │   │   ├── E4100.md
+    │   │   │   │   ├── E4101.md
+    │   │   │   │   ├── E4102.md
+    │   │   │   │   ├── E4103.md
+    │   │   │   │   ├── E4104.md
+    │   │   │   │   ├── E4105.md
+    │   │   │   │   ├── E4106.md
+    │   │   │   │   ├── E4107.md
+    │   │   │   │   ├── E4108.md
+    │   │   │   │   ├── E4109.md
+    │   │   │   │   ├── E4110.md
+    │   │   │   │   ├── E4111.md
+    │   │   │   │   ├── E4112.md
+    │   │   │   │   ├── E4113.md
+    │   │   │   │   ├── E4114.md
+    │   │   │   │   ├── E4115.md
+    │   │   │   │   ├── E4116.md
+    │   │   │   │   ├── E4117.md
+    │   │   │   │   ├── E4118.md
+    │   │   │   │   ├── E4119.md
+    │   │   │   │   ├── E4120.md
+    │   │   │   │   ├── E4121.md
+    │   │   │   │   ├── E4122.md
+    │   │   │   │   ├── E4124.md
+    │   │   │   │   ├── E4125.md
+    │   │   │   │   ├── E4127.md
+    │   │   │   │   ├── E4128.md
+    │   │   │   │   ├── E4129.md
+    │   │   │   │   ├── E4130.md
+    │   │   │   │   ├── E4131.md
+    │   │   │   │   ├── E4132.md
+    │   │   │   │   ├── E4133.md
+    │   │   │   │   ├── E4134.md
+    │   │   │   │   ├── E4135.md
+    │   │   │   │   ├── E4136.md
+    │   │   │   │   ├── E4137.md
+    │   │   │   │   ├── E4138.md
+    │   │   │   │   ├── E4139.md
+    │   │   │   │   ├── E4140.md
+    │   │   │   │   ├── E4141.md
+    │   │   │   │   ├── E4142.md
+    │   │   │   │   ├── E4143.md
+    │   │   │   │   ├── E4144.md
+    │   │   │   │   ├── E4145.md
+    │   │   │   │   ├── E4146.md
+    │   │   │   │   ├── E4147.md
+    │   │   │   │   ├── E4148.md
+    │   │   │   │   ├── E4149.md
+    │   │   │   │   ├── E4150.md
+    │   │   │   │   ├── index.md
+    │   │   │   ├── ffi-and-wasm-host.md
+    │   │   │   ├── fundamentals.md
+    │   │   │   ├── index.md
+    │   │   │   ├── introduction.md
+    │   │   │   ├── methods.md
+    │   │   │   ├── packages.md
+    │   │   │   ├── tests.md
+    │   │   ├── sources/
+    │   │   │   ├── async/
+    │   │   │   │   ├── src/
+    │   │   │   │   │   ├── async.mbt
+    │   │   │   ├── diff/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── src/
+    │   │   │   │   │   ├── part1/
+    │   │   │   │   │   │   ├── bparray.mbt
+    │   │   │   │   │   │   ├── diff.mbt
+    │   │   │   │   │   │   ├── line.mbt
+    │   │   │   │   │   ├── part2/
+    │   │   │   │   │   │   ├── bparray.mbt
+    │   │   │   │   │   │   ├── diff.mbt
+    │   │   │   │   │   │   ├── edit.mbt
+    │   │   │   │   │   │   ├── line.mbt
+    │   │   │   │   │   ├── part3/
+    │   │   │   │   │   │   ├── bparray.mbt
+    │   │   │   │   │   │   ├── diff.mbt
+    │   │   │   │   │   │   ├── edit.mbt
+    │   │   │   │   │   │   ├── line.mbt
+    │   │   │   ├── gmachine/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── src/
+    │   │   │   │   │   ├── part1/
+    │   │   │   │   │   │   ├── ast.mbt
+    │   │   │   │   │   │   ├── compile.mbt
+    │   │   │   │   │   │   ├── instruction.mbt
+    │   │   │   │   │   │   ├── lazy.mbt
+    │   │   │   │   │   │   ├── programs.mbt
+    │   │   │   │   │   │   ├── syntax.mbt
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── vm.mbt
+    │   │   │   │   │   ├── part2/
+    │   │   │   │   │   │   ├── ast.mbt
+    │   │   │   │   │   │   ├── compile.mbt
+    │   │   │   │   │   │   ├── instruction.mbt
+    │   │   │   │   │   │   ├── programs.mbt
+    │   │   │   │   │   │   ├── syntax.mbt
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── vm.mbt
+    │   │   │   │   │   ├── part3/
+    │   │   │   │   │   │   ├── ast.mbt
+    │   │   │   │   │   │   ├── compile.mbt
+    │   │   │   │   │   │   ├── instruction.mbt
+    │   │   │   │   │   │   ├── programs.mbt
+    │   │   │   │   │   │   ├── syntax.mbt
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── vm.mbt
+    │   │   │   ├── lambda-expression/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── src/
+    │   │   │   │   │   ├── top.mbt
+    │   │   │   ├── language/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── src/
+    │   │   │   │   │   ├── builtin/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── controls/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── data/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── derive/
+    │   │   │   │   │   │   ├── default.mbt
+    │   │   │   │   │   │   ├── eq_compare.mbt
+    │   │   │   │   │   │   ├── hash.mbt
+    │   │   │   │   │   │   ├── json.mbt
+    │   │   │   │   │   │   ├── show.mbt
+    │   │   │   │   │   ├── error/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── functions/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── generics/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── is/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── iter/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── main/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── method/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── method2/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── misc/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── operator/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── packages/
+    │   │   │   │   │   │   ├── pkgA/
+    │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── pkgB/
+    │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   │   ├── pkgC/
+    │   │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── pattern/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── test/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── trait/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── variable/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   ├── segment-tree/
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── src/
+    │   │   │   │   │   ├── part1/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   │   │   │   ├── part2/
+    │   │   │   │   │   │   ├── top.mbt
+    │   │   ├── toolchain/
+    │   │   │   ├── index.md
+    │   │   │   ├── moon/
+    │   │   │   │   ├── commands.md
+    │   │   │   │   ├── coverage.md
+    │   │   │   │   ├── index.md
+    │   │   │   │   ├── module.md
+    │   │   │   │   ├── package-manage-tour.md
+    │   │   │   │   ├── package.md
+    │   │   │   │   ├── tutorial.md
+    │   │   ├── tutorial/
+    │   │   │   ├── index.md
+    │   │   │   ├── tour.md

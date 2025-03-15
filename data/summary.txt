@@ -1,0 +1,7 @@
+Statistics Summary
+=================
+Total files processed: 549
+Total file size: 908.00 KB (0.89 MB)
+Average file size: 1.65 KB
+Total tokens: 141915
+Average tokens per file: 258.50
